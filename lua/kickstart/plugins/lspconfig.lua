@@ -27,7 +27,15 @@ return {
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
+      {
+        'saghen/blink.cmp',
+        opts = {
+          keymap = {
+            preset = 'default',
+            ['<CR>'] = { 'accept' },
+          },
+        },
+      },
     },
     config = function()
       -- Brief aside: **What is LSP?**
